@@ -1,0 +1,36 @@
+{
+  "name": "full-stack-cases-ontario",
+  "version": "1.0.0",
+  "description": "Small Full-stack experiment for ontario cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anauthdes/Full-Stack-Cases-Ontario.git"
+  },
+  "keywords": [
+    "MEAN",
+    "MongoDB",
+    "Express",
+    "Angular",
+    "Node",
+    "Ontario"
+  ],
+  "author": "Anauthdes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anauthdes/Full-Stack-Cases-Ontario/issues"
+  },
+  "homepage": "https://github.com/anauthdes/Full-Stack-Cases-Ontario#readme",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
