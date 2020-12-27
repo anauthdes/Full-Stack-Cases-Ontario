@@ -1,14 +1,30 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>FSCO - Full Stack Cases Ontario</title>
+    <title>FSCO - Full Stack Cases Ontario</title>
 </head>
+
 <body>
-	<h1>FSCO</h1>
-	<div class="main-container">
-		<h2>Data</h2>
-		<div class="ng-app"></div>
-	</div>
+    <h1>FSCO</h1>
+    <div class="main-container">
+        <h2>Data</h2>
+        <div class="data-display" ng-app="casedata">
+            <h2 class="data-date-range">{{daterange}}</h2>
+            <span class="input-date-range">
+            	<input type="date" name="startdate" placeholder="Start Date" value="" ng-model="startdate">
+            	<input type="date" name="enddate" placeholder="End Date" value="" ng-model="enddate">
+            </span>
+            <span class="data-display-summary">
+            	<span>Sum of Cases: {{sumcases}}</span>
+            	<span>Active Cases: {{activecases}}</span>
+            	<span>Cured Cases: {{curedcases}}</span>
+            	<span>Total Deaths: {{deathcases}}</span>
+            	<span>Under INvestigation: {{investigationcases}}</span>
+            	<span>Hospital Cases: {{hospitalcases}}</span>
+            </span>
+        </div>
+    </div>
 </body>
+
 </html>
