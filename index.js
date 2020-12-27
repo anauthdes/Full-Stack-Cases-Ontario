@@ -1,6 +1,5 @@
 
 // To run the server with refreshes use 
-// cd C:\Users\YaxGamingPC\node\FSCO\Full-Stack-Cases-Ontario
 // npm run start
 const express = require('express');
 const path = require('path');
