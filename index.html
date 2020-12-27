@@ -3,17 +3,19 @@
 
 <head>
     <title>FSCO - Full Stack Cases Ontario</title>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/app-render.js"></script>
 </head>
 
 <body>
     <h1>FSCO</h1>
     <div class="main-container">
         <h2>Data</h2>
-        <div class="data-display" ng-app="casedata">
-            <h2 class="data-date-range">{{daterange}}</h2>
+        <div class="data-display" ng-app="casedata" ng-controller="caseCtrl">
+            <h2 class="data-date-range">{{startdate + " : " + enddate}}</h2>
             <span class="input-date-range">
-            	<input type="date" name="startdate" placeholder="Start Date" value="" ng-model="startdate">
-            	<input type="date" name="enddate" placeholder="End Date" value="" ng-model="enddate">
+            	<input type="date" name="startdate" placeholder="Start Date" ng-model="startdate">
+            	<input type="date" name="enddate" placeholder="End Date" ng-model="enddate">
             </span>
             <span class="data-display-summary">
             	<span>Sum of Cases: {{sumcases}}</span>
