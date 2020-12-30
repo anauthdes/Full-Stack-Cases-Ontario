@@ -42,6 +42,7 @@ callback = function(response) {
         });
 
         app.use('/js', express.static(path.join(__dirname, '/node_modules/angular')));
+        app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
         app.use('/js', express.static(path.join(__dirname, '/js')));
         app.use('/temp', express.static(path.join(__dirname,"/js/temp")));
 
