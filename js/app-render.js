@@ -25,14 +25,23 @@ function readTextFile(file, app) {
 
 function runCaseControler(app, info) {
     console.log("info: ", info);
+
+    var reportDate = new Date(info.result.records[0]["Reported Date"]);
+
     app.controller('caseCtrl', function($scope) {
-        $scope.startdate = new Date();
-        $scope.enddate = new Date();
+        $scope.reportdate = reportDate.getFullYear() + " - " + addLeadingZero(reportDate.getMonth() + 1) + " - " + addLeadingZero(reportDate.getDate() );
         $scope.sumcases = info.result.records[0]["Total Cases"];
         $scope.activecases = info.result.records[0]["Confirmed Positive"];
-        $scope.curedCases = info.result.records[0]["Resolved"];
+        $scope.curedcases = info.result.records[0]["Resolved"];
         $scope.deathcases = info.result.records[0]["Deaths"];
         $scope.investigationcases = info.result.records[0]["Total patients approved for testing as of Reporting Date"];
         $scope.hospitalcases = info.result.records[0]["Number of patients hospitalized with COVID-19"];
     });
+}
+
+function addLeadingZero(num){
+    if(Math.abs(num) < 10){
+        return "0" + Math.abs(num).toString;
+    }
+    return num;
 }

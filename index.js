@@ -7,7 +7,8 @@ const fs = require('fs');
 const app = express();
 const port = 3000;
 const router = express.router;
-
+var curdate = new Date();
+var dateoffset = 1;
 
 var data = {
     resource_id: 'ed270bb8-340b-41f9-a7c6-e8ef587e6d11', // the resource id
@@ -17,7 +18,7 @@ var data = {
 
 var options = {
     host: 'data.ontario.ca',
-    path: '/api/3/action/datastore_search?resource_id=ed270bb8-340b-41f9-a7c6-e8ef587e6d11&limit=1&q=2020-12-26',
+    path: '/api/3/action/datastore_search?resource_id=ed270bb8-340b-41f9-a7c6-e8ef587e6d11&q=' + curdate.getFullYear() + '-' + addLeadingZero(curdate.getMonth()+1) + '-' + addLeadingZero(curdate.getDate() - dateoffset),
     dataType: 'jsonp',
     //port: port,
     //This is the only line that is new. `headers` is an object with the headers to request
@@ -60,3 +61,10 @@ callback = function(response) {
 
 var req = http.request(options, callback);
 req.end();
+
+function addLeadingZero(num){
+    if(Math.abs(num) < 10){
+        return "0" + Math.abs(num).toString;
+    }
+    return num;
+}

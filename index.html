@@ -13,17 +13,17 @@
     <div class="main-container">
         <h2>Data</h2>
         <div class="data-display" ng-app="casedata" ng-controller="caseCtrl">
-            <h2 class="data-date-range">{{startdate + " : " + enddate}}</h2>
-            <span class="input-date-range">
+            <h2 class="data-date-range">{{reportdate}}</h2>
+            <!-- <span class="input-date-range">
             	<input type="date" name="startdate" placeholder="Start Date" ng-model="startdate">
             	<input type="date" name="enddate" placeholder="End Date" ng-model="enddate">
-            </span>
+            </span> -->
             <span class="data-display-summary">
             	<span>Sum of Cases: {{sumcases}}</span>
             	<span>Active Cases: {{activecases}}</span>
-            	<span>Cured Cases: {{curedcases}}</span>
+            	<span>Resolved Cases: {{curedcases}}</span>
             	<span>Total Deaths: {{deathcases}}</span>
-            	<span>Under INvestigation: {{investigationcases}}</span>
+            	<span>Under Investigation: {{investigationcases}}</span>
             	<span>Hospital Cases: {{hospitalcases}}</span>
             </span>
         </div>
