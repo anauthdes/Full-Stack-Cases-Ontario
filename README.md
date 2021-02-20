@@ -1,6 +1,8 @@
 # Full-Stack-Cases-Ontario
 A small full stack application from pulling cases from the Ontario public data API
 
+BIG WIP - currently incomplete
+
 Notes
 ----
 Just an experimental project using open data and the MEAN Stack, Please feel free to fork or use as needed. 
